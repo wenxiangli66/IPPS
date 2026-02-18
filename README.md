@@ -1,30 +1,33 @@
 # IPPS-MIMIC Project
 
-本仓库包含 **Interpretable Prognosis Prediction System (IPPS)** 在 MIMIC 数据集上的实现，用于基于 EHR（电子病历）进行 **可解释的死亡风险预测**。
+This repository contains the implementation of the **Interpretable Prognosis Prediction System (IPPS)** for mortality prediction using Electronic Health Records (EHR) from MIMIC datasets.
+
+The goal of this project is to provide an accurate **and interpretable** clinical risk prediction framework by integrating disease-specific expert modules with temporal sequence models (e.g., Mamba backbone).
 
 ---
 
-## 📂 核心文件
+## 📂 Core Files
 
 | File | Role |
 |------|------|
-| `my_dataset_mimicIV_3_mamba_mimiciii.py` | **主运行脚本**：运行训练/推理流程（mortality prediction） |
-| `process_mimic_iv_v1.py` | **数据处理脚本**：对 MIMIC 数据进行预处理，生成模型可用的数据格式 |
+| `my_dataset_mimicIV_3_mamba_mimiciii.py` | **Main execution script** — runs training/inference for mortality prediction |
+| `process_mimic_iv_v1.py` | **Data preprocessing script** — prepares MIMIC dataset for modeling |
 
-**运行顺序：**
+**Execution Order**
 
 `process_mimic_iv_v1.py` → `my_dataset_mimicIV_3_mamba_mimiciii.py`
 
+
 ---
 
-## ⚙️ 环境要求
+## ⚙️ Environment Requirements
 
-- Python: **3.12.0**
-- PyTorch: **2.7.0**（GPU 版本推荐）
+- Python **3.12.0**
+- PyTorch **2.7.0**
 
-建议硬件环境：
+Recommended hardware:
 
-- NVIDIA GPU（强烈推荐）
-- CUDA 可用
+- NVIDIA GPU (**strongly recommended**)
+- CUDA-enabled environment
 
 
